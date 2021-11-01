@@ -1,0 +1,17 @@
+{
+  "name": "tic-tac-toe-app",
+  "version": "1.0.0",
+  "description": "Basic tic tac toe game built with Electron.",
+  "main": "index.js",
+  "scripts": {
+    "package": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\""
+  },
+  "author": "Focus",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^15.3.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.4.0"
+  }
+}
