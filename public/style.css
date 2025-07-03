@@ -2,7 +2,6 @@ body {
   margin: 0;
   overflow: hidden;
 }
-
 .board {
   width: 100vw;
   height: 100vh;
@@ -11,7 +10,6 @@ body {
   align-content: center;
   grid-template-columns: repeat(3, auto);
 }
-
 .cell {
   width: 100px;
   height: 100px;
@@ -22,32 +20,26 @@ body {
   position: relative;
   cursor: pointer;
 }
-
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
   border-top: none;
 }
-
 .cell:nth-child(3n + 1) {
   border-left: none;
 }
-
 .cell:nth-child(3n + 3) {
   border-right: none;
 }
-
 .cell:last-child,
 .cell:nth-child(8),
 .cell:nth-child(7) {
   border-bottom: none;
 }
-
 .cell.x,
 .cell.o {
   cursor: not-allowed;
 }
-
 .cell.x::before,
 .cell.x::after,
 .board.x .cell:not(.x):not(.o):hover::before,
@@ -58,17 +50,14 @@ body {
   height: 90px;
   background-color: black;
 }
-
 .cell.x::before,
 .board.x .cell:not(.x):not(.o):hover::before {
   transform: rotate(45deg);
 }
-
 .cell.x::after,
 .board.x .cell:not(.x):not(.o):hover::after {
   transform: rotate(-45deg);
 }
-
 .cell.o::before,
 .cell.o::after,
 .board.o .cell:not(.x):not(.o):hover::before,
@@ -80,20 +69,17 @@ body {
   height: 90px;
   background-color: black;
 }
-
 .cell.o::after,
 .board.o .cell:not(.x):not(.o):hover::after {
   width: 63px;
   height: 63px;
   background-color: white;
 }
-
 .board.x .cell:not(.x):not(.o):hover::before,
 .board.x .cell:not(.x):not(.o):hover::after,
 .board.o .cell:not(.x):not(.o):hover::before {
   background-color: #cccccc;
 }
-
 .win-msg {
   position: fixed;
   top:0;
@@ -109,11 +95,9 @@ body {
   color: white;
   display: none;
 }
-
 .win-msg h1 {
   margin: auto;
 }
-
 .restart {
   width: 300px;
   margin: auto;
@@ -124,7 +108,6 @@ body {
   cursor: pointer;
   transition: .5s;
 }
-
 .restart:hover {
   background-color: black;
   border-color: white;

@@ -19,6 +19,7 @@ const startGame = () => {
   let i = 1;
   let oTurn = 0;
   let currentClass;
+
   cells.forEach((cell) => {
     cell.addEventListener('click', (e) => {
       let clickedCell = e.target;
@@ -50,10 +51,12 @@ const startGame = () => {
       }
     }, { once: 1 });
   });
+  
   winMsg.style.display = 'none';
   cells.forEach((cell) => cell.classList.remove('x', 'o'));
   board.classList.remove('x', 'o');
   board.classList.add('x');
 }
+
 startGame();
 restart.addEventListener('click', startGame);
