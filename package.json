@@ -1,15 +1,28 @@
 {
   "name": "tic-tac-toe-app",
   "version": "1.0.0",
-  "description": "Basic tic tac toe game built with Electron.",
+  "description": "Basic tic tac toe game desktop app.",
   "main": "index.js",
   "scripts": {
-    "package": "electron-packager . tic-tac-toe-app --overwrite --platform=win32 --arch=ia32 --icon=icons/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Tic Tac Toe\""
+    "package": "electron-builder --dir",
+    "dist": "electron-builder --win --x64"
   },
-  "author": "Focus",
+  "build": {
+    "appId": "com.focus.tictactoe",
+    "productName": "Tic Tac Toe",
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "author": "Alexandru Ogrezeanu",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^15.3.0",
-    "electron-packager": "^15.4.0"
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
   }
 }
