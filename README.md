@@ -7,8 +7,7 @@ A simple yet classic Tic Tac Toe game built as a desktop application using elect
 ## Features
 
 - 🎮 Classic 3x3 Tic Tac Toe gameplay
-- ⭕/❌ Visual X and O markers
-- 🏆 Automatic win detection (8 possible winning combinations)
+- 🏆 Automatic win detection
 - 🤝 Draw detection when board is full
 - 🔄 One-click game restart
 - 🖥️ Desktop application experience
